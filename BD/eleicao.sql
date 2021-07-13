@@ -9,15 +9,12 @@ CREATE DATABASE politica
 
 
 
-CREATE TABLE public.candidato
-(
+CREATE TABLE candidato (
+    id serial,
+    nome VARCHAR(50),
+    partido varchar(20),
+    numero INTEGER
 )
-
-TABLESPACE pg_default;
-
-ALTER TABLE public.candidato
-    OWNER to postgres;
-
 
 
 CREATE TABLE public.projeto
