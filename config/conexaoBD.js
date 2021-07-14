@@ -5,22 +5,23 @@ const conexao = mysql.createConnection({
     user: "root",
     password:"pg123456admin",
     database: "politica"
-});
+});*/
 
-module.exports = conexao*/
 
 const { Pool } = require('pg')
 const pool = new Pool({
-  user: '{root}',
-  host: '{host}',
-  database: '{politica}',
-  password: '{pg123456admin}',
-  port: {5432},
+  user: 'postgres',
+  host: 'localhost',
+  database: 'politica',
+  password: 'pg123456admin',
+  port: 5432,
 })
-pool.query('SELECT NOW()', (err, res) => {
+/*pool.query('SELECT NOW()', (err, res) => {
   console.log(err, res) 
   pool.end() 
-})
+})*/
+
+module.exports = pool
 
 /*const { Conexao } = require('pg');
 const dotenv = require('dotenv');

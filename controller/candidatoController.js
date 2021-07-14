@@ -19,7 +19,7 @@ exports.inserir = (req, res) => {
     const candidato = req.body;
     
     //SQL
-    const sql = "INSERT INTO candidato(nome, partido, numero) VALUES (?,?)"
+    const sql = "INSERT INTO candidato(nome, partido, numero) VALUES (?,?,?)"
 
     conexao.query(sql, [candidato.nome, candidato.partido, candidato.numero],
         (erro, rows) => {
