@@ -7,7 +7,7 @@ app.use(express.urlencoded({ extended: true })) // for parsing application/x-www
 
 //Rotas
 const candidatoRota = require('./rotas/candidatoRotas')
-app.use('/api/candidato', candidatoRota)
+app.use('/candidato', candidatoRota)
 
 app.listen(port, () => {
   console.log(`Executando servidor em http://localhost:${port}`)

@@ -15,8 +15,8 @@ exports.listar = (req, res) => {
 }
 
 exports.inserir = (req, res) => {
-    //Obter o dado do request - nome e o preco
-    const produto = req.body;
+    //Obter o dado do request - nome, partido e número
+    const candidato = req.body;
     
     //SQL
     const sql = "INSERT INTO candidato(nome, partido, numero) VALUES (?,?)"
@@ -28,8 +28,8 @@ exports.inserir = (req, res) => {
             console.log(erro)
         }
         else {
-            produto.id = rows.insertId;
-            res.status(201).json(produto)
+            candidato.id = rows.insertId;
+            res.status(201).json(candidato)
         }
     })
 }
